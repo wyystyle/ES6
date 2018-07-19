@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>001-let</title>
+</head>
+<body>
+	<button>1</button>
+	<button>2</button>
+	<button>3</button>
+	<button>4</button>
+</body>
+	<script>
+		// let name='Tom'; //在ES6中let只能申请一个同名变量
+		// // let name='Leo'; 会报错
+		// console.log(name)
+
+		// var //声明的提升
+		// console.log(age); //系统会打印underfind
+		// var age =18;
+
+		// //系统会报错
+		// console.log(age); 
+		// let age =18
+
+
+		
+		// {
+		// 	var age=18;//申请的是全局变量
+		// 	let age1=20; //申请的是块级作用域
+		// 	console.log(age1); //能打印出20
+		// }
+		// console.log(age) //能打印出18
+		// console.log(age1) //会报错
+
+
+		// function showAge(){
+		// 	let age=18
+		// 	console.log('aut::',age) //打印出aut：：18
+		// 	function showAgeAagin(){
+		// 		let age=20;
+		// 		console.log('in::',age) //打印出 in:: 20
+		// 	}
+		// 	showAgeAagin()
+		// }
+		// showAge();
+
+
+		var aBtn=document.getElementsByTagName('button');
+
+		// for(var i=0;i<aBtn.length; i++){
+		// 	// 解决办法1就是
+		// 	aBtn[i].index=i
+
+		// 	aBtn[i].onclick=function(){
+		// 		console.log(i) //var声明的i 点击哪个button只能打印出aBtn.length +1
+				
+
+		// 		console.log(this.index)
+		// 	}
+
+		// }
+
+		//解决办法2写一个闭包
+
+		for(var i=0;i<aBtn.length; i++){
+
+			(function(i){
+
+				aBtn[i].onclick=function(){
+				console.log(i) 
+			}
+
+			})(i)
+		}
+
+
+
+
+
+		// var aBtn=document.getElementsByTagName('button');
+
+		// for(let i=0;i<aBtn.length; i++){
+		// 	aBtn[i].onclick=function(){
+		// 		console.log(i) //let声明的i 点击哪个button能打印出其下标
+		// 	}
+
+		// }
+
+	</script>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>003-结构解析</title>
+</head>
+<body>
+	
+</body>
+<script>
+	// var a=1,
+	// 	b=2;
+	// 	c=3;
+	// 	console.log(a,b,c)
+
+
+	// let [a,b,c]=[1,2,3];
+	// console.log(a,b,c) //打印出1,2,3 按照对应关系一一赋值；
+
+	// let [a,[b,c],d]=[1,[2,3],4];
+	// console.log(a,b,c,d);// 打印出1,2,3,4 可以嵌套 
+
+	// let [a,b,c]=[1,2];
+	// console.log(a,b,c) //打印出1,2,underfind
+
+
+	// let [a,[b,c],d]=[1,[2],4];
+	// console.log(a,b,c,d) //打印出1,2，underfind 4
+
+	// let [a,b,c=9]=[1,2];
+	// console.log(a,b,c) //打印出1，2,9 如果对应的值是underfind 则为初始值
+
+	// let [a,b,c=9]=[1,2,3];
+	// console.log(a,b,c) //打印出1，2,3 如果对应的值后面赋值 则为后面的值
+
+
+	// let [a,[b,c=22],d]=[1,[2],4];
+	// console.log(a,b,c,d); //会打印出 1,2,22,4
+
+
+	// let [a,[b,c=22],d]=[1,[2,3],4];
+	// console.log(a,b,c,d); //会打印出 1,2,3,4  如果对应的值后面赋值 则为后面的值
+
+	// let [a,b,c]=11;
+	// con.log(a,b,c)//会报错 数组后面应该对应数组
+
+
+
+</script>
+</html>
