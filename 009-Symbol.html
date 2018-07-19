@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>009-Symbol</title>
+</head>
+<body>
+	
+</body>
+<script>
+	//主要解决命名冲突
+
+
+	// var obj={name:'Tom'};
+
+	// obj.name='Leo';
+	// console.log(obj.name); //打出的是Leo;
+
+
+
+	// let s1=Symbol();
+
+	// console.log(typeof s1); //数据类型sybbol
+
+
+	let s1=Symbol('name');
+	let obj={[s1]:'Tom'};
+
+	let s2=Symbol('name');
+	obj[s2]='Leo';
+
+
+	// console.log(s1==s2) //false
+
+
+	//对定义这种唯一变量的进行遍历
+	let key=Reflect.ownKeys(obj);
+
+	for(key in keys){
+		console.log(key);
+	}
+
+
+</script>
+</html>

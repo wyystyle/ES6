@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>007-Iterator-for-of</title>
+</head>
+<body>
+	
+</body>
+<script>
+	// let s=new Set();
+	// let arr=[];
+	// console.log(typeof s); 
+	// console.log(typeof arr); //object
+	// s.add(11);
+	// s.add(22);
+	// s.add(33);
+	// s.add(11); //add是添加值 并且是唯一的 没有重复
+
+
+	// s.delete(22);//删除值
+
+
+	// console.log(s);
+	// console.log(s.has(22));//判断是否有此值 返回布尔值
+	// console.log(s.size);
+
+
+
+	// let s=new Set([11,22,33,44,11]);
+	// console.log(s); //去重
+
+
+	// let arr=[11,22,33,44,22,44];
+	// let s=new Set(arr);
+	// let arr2=[...arr];
+
+
+
+	let arr=[11,22,33,44,22];
+	let s=new Set(arr);
+	console.log(s.keys());
+	for(key of s.keys()){
+		console.log(key)
+	}	
+</script>
+</html>

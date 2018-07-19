@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>004-结构解析对象</title>
+</head>
+<body>
+	
+</body>
+<script>
+	// let {username:username1,age:age1}={username:'Tom',age:18};
+	// console.log(username1,age1);
+
+	// let {username,age}={username:'Tom',age:18};
+	// //等于
+	// let {username:username,age:age}={username:'Tom',age:18};
+	// console.log(username,age);
+
+
+	// let {person,dog}={person:{
+	// 	name:'Tom',
+	// 	age:18
+	// },dog:{
+	// 	name:'Leo',
+	// 	age:4
+	// }}
+	// console.log(person,dog) //打印出两个对象
+
+
+	let {person:{name='Tom'},dog:{age:4}}={person:null,dog:{age:7}}
+	console.log(person,dog) //以后面为准
+</script>
+</html>
