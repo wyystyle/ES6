@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>016-promise-finally</title>
+</head>
+<body>
+		
+</body>
+<script>
+	let getLoadImgPromise=(url)=>{
+
+		let promise=new Promise((resolve,reject)=>{
+			let image=new Image();
+			image.onload=()=>{
+				resolve(url);
+			}
+			image.onerror=()=>{
+				reject(url);
+			}
+			image.src=url;
+		});
+		return promise;
+	}
+	let promise=getLoadImgPromise('img/01.jpg');
+	promise
+	.then((url)=>{
+		console.log(url+'success loaded');
+		// throw console.log("异常");
+	})
+	.catch((err)=>{
+		console.log("catch...",err);
+	})
+	.finaiiy(()=>{
+		console.log("finally..")  //无论成功还是失败都要走这一步
+	})
+
+</script>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>014-Promise</title>
+</head>
+<body>
+	
+</body>
+<script>
+	//Promise 承诺 
+	/*let loadImg=(url,success,fail)=>{
+		let image =new Image();
+		image.onload=()=>{
+			success();
+			
+		}
+		image.onerror=()=>{
+			fail();
+			
+		}
+
+		image.src=url;
+	}
+	loadImg('img/1.jpg',()=>{
+		console.log('success loaded');
+	},()=>{
+		console.log('failed loaded');
+	})*/
+
+
+	// let getLoadImgPromise=(url)=>{
+	// 	let promise= new Promise((resolve,reject)=>{
+
+	// 		let image=new Image();
+	// 		image.onload=()=>{
+	// 			resolve();
+			
+	// 		}
+	// 		image.onerror=()=>{
+	// 			reject();
+				
+	// 		}
+
+	// 			image.src=url;
+	// 		});
+	// 	return promise;
+	// }
+	// let promise=getLoadImgPromise('img/1.jpg')
+	// console.log(promise);
+	// promise.then(()=>{
+	// 	console.log('success loaded');
+	// },()=>{
+	// 	console.log('failed loaded');
+	// })
+
+	//使用promise对象上的方法来执行
+	let getLoadImgPromise=(url)=>{
+
+		let promise=new Promise((resolve,reject)=>{
+			let image=new Image();
+			image.onload=()=>{
+				resolve(url);
+			}
+			image.onerror=()=>{
+				reject(url);
+			}
+			image.src=url;
+		});
+		return promise;
+	}
+	let promise=getLoadImgPromise('img/01.jpg');
+	promise.then((url)=>{
+		console.log(url+'success loaded');
+	},(url)=>{
+		console.log(url+'failed loaded');
+	})
+
+</script>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>017-promise-race</title>
+</head>
+<body>
+	
+</body>
+<script>
+	let p=new Promise((resolve,reject)=>{
+		p1=setTimeout(()=>{
+			p.resolve();
+		},1000);
+		
+	})
+</script>
+</html>

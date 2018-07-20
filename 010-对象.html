@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>010-对象</title>
+</head>
+<body>
+	
+</body>
+<script>
+	// function Person(name,age){
+	// 	this.name=name;
+	// 	this.age=age;
+	// }
+
+	// Person.prototype={
+	// 	constructor:Person,
+	// 	showName:function(){
+	// 		console.log("I am"+this.name);
+	// 	},
+	// 	showAge:function(){
+	// 		console.log("I am"+this.age+"years old");
+	// 	},
+	// }
+
+	// var p=new Person("Tom",18);
+	// p.showName();
+	// p.showAge();
+	class Person{
+		constructor(name,age){ //参数传到constructor  系统会返回this
+			this.name=name;
+			this.age=age;
+
+		}
+		showName(){
+			console.log("I am"+this.name);
+		}
+		showAge(){
+			console.log("I am"+ this.age +"years old");
+		}
+		static sayHi(){ //静态方法
+			console.log("say Hi...")
+		} 
+
+	}
+	class Student extends Person{
+		constructor(name,age,majoy){
+			super(name,age);
+			this.majoy=majoy;
+		}
+		showMajoy(){
+			console.log("I am from"+this.majoy);
+		}
+
+	}
+	// let p=new Person("Tom",18);
+
+	// p.showName();
+	// p.showAge();
+
+	// console.log(typeof Person); //是个function
+	// console.log(p);//obj
+	// console.log(Person.prototype);
+
+		let s=new Student("Tom",18,'Computer');
+		s.showName();
+		s.showAge();
+		s.showMajoy();
+		// s.sayHi();	
+
+
+</script>
+</html>

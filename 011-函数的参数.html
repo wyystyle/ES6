@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>011-函数的参数</title>
+</head>
+<body>
+	
+</body>
+<script>
+	/*function show(msg){
+		msg=msg || 'hellow'; 
+		console.log(msg);
+	}
+	show('Hi');*/
+
+
+	/*function show(msg){
+		// msg=msg || 'hellow'; 
+		if(typeof msg == undefined){
+			msg='hellow';
+		}
+		console.log(msg);
+	}
+	show();
+*/
+
+	// function show(msg='hellow'){
+	// 	console.log(msg);
+	// }
+	// show('');
+
+
+	// function show(name,msg='hellow'){ //默认参数罗列在后面
+	// 	console.log(msg,name);
+	// }
+	// show("Tom");
+
+	/*function show(name,{age=18,sex="男"}={}){
+		console.log(name,age,sex);
+	}
+
+	show("Amy",{age:88,sex:"女"});*/
+
+	/*function show(name,...arg){
+		console.log(name,arg[0],arg[1]);
+	}
+	show("Amy",...[18,"男"]);*/
+
+	/*let i=99;
+	function show(arg=i+1){
+		console.log(arg);
+	}
+	show();
+
+	i=111;
+	show();*/
+</script>
+</html>
